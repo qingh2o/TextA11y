@@ -78,7 +78,7 @@ text_elements = driver.find_elements(
     "//body//*[text() and not(self::script) and not(self::style) and not(self::noscript) and not(self::template) and not(self::svg)]"
 )
 
-print("-"*50)
+print("\nScanning elements ... \nPlease wait for the website to close automatically.")
 
 for element in text_elements:
     # FILTER 1: Skip elements that are visually hidden on the screen
@@ -214,6 +214,10 @@ cur.execute('''
     WHERE Status.status = 'PASS'
 ''')
 total_passes = cur.fetchone()[0]
+
+print("-"*50)
+print("Audit Summary Report")
+print("-"*50)
 
 print(f"❌ Total Failures Elements: {total_failures}")
 print(f"⚠️ Total Pixel Sampling Required: {total_sampling}")

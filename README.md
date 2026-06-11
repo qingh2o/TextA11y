@@ -76,7 +76,7 @@ Tracks individual DOM typographic configurations evaluated:
 
 ---
 
-## ⚡ Installation & Local Setup
+## ⚙️ Installation & Local Setup
 
 1. Clone the Repository
 
@@ -104,3 +104,32 @@ Upon launching, the engine will prompt you for configuration details:
 
 1. **Database name**: Type a name for your data file (e.g., nasadata). The application automatically structures and appends .sqlite layout extensions if omitted.
 2. **Target URL**: Paste any live web system page URL to launch scanning operations. (Pressing Enter without input defaults the runner to a pre-set test link).
+
+
+## 🎯 Terminal Reporting Output Sample:
+
+```
+==================================================
+UX/UI Text Accessibility Audit Engine
+==================================================
+Enter database name: texta11y
+Enter the audit target URL: https://data.nas.nasa.gov/
+
+🚀 Initializing database: texta11y.sqlite
+🌐 Target URL: https://data.nas.nasa.gov/
+
+Scanning elements ... 
+Please wait for the website to close automatically.
+--------------------------------------------------
+Audit Summary Report
+--------------------------------------------------
+❌ Total Failures Elements: 12
+⚠️ Total Pixel Sampling Required: 17
+✅ Total Passing Elements: 149
+📊 Total Elements Audited: 178
+==================================================
+Audit Completed - Database Refreshed
+==================================================
+
+
+```
