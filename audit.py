@@ -78,7 +78,7 @@ text_elements = driver.find_elements(
     "//body//*[text() and not(self::script) and not(self::style) and not(self::noscript) and not(self::template) and not(self::svg)]"
 )
 
-print("\nScanning elements ... \nPlease wait for the website to close automatically.")
+print("\nScanning elements ... \nBrowser will close automatically when finished")
 
 for element in text_elements:
     # FILTER 1: Skip elements that are visually hidden on the screen

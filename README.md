@@ -32,7 +32,7 @@ These entries are preserved in the ledger to indicate that an eye-dropper pixel 
 
 ## 🛠️ Tech Stack & Dependencies
 
-* **Language:** Python 3.14.6
+* **Language:** Python 3.12+
 * **Automation Engine:** Selenium WebDriver (Chromium Engine)
 * **Database Engine:** SQLite 3
 * **Compliance Protocol:** W3C WCAG 2.2 Success Criteria 1.4.3 (Contrast Minimum)
@@ -90,7 +90,14 @@ pip install selenium
 ```
 Note: WebDriver management for Google Chrome is handled natively by contemporary versions of Selenium, but ensure you have Google Chrome installed.
 
-3. Execute the auditor module via your terminal terminal interface:
+3. Install DB Browser for SQLite
+The audit results are stored in a SQLite database file (.sqlite). 
+
+To inspect, query, and export the generated audit data.
+
+After the audit completes, open the generated .sqlite file using DB Browser for SQLite to review the audit records.
+
+4. Execute the auditor module from your terminal:
 
 ```
 
@@ -118,8 +125,10 @@ Enter the audit target URL: https://data.nas.nasa.gov/
 🚀 Initializing database: texta11y.sqlite
 🌐 Target URL: https://data.nas.nasa.gov/
 
-Scanning elements ... 
-Please wait for the website to close automatically.
+Scanning elements ...
+Chrome browser launched successfully.
+Please wait while the audit completes.
+The browser window will close automatically when finished.
 --------------------------------------------------
 Audit Summary Report
 --------------------------------------------------
