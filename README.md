@@ -54,13 +54,14 @@ WEBA11Y/
 ## 📊 Database Schema Details
 
 The application creates two normalized data entities inside the generated SQLite binary file:
-1. Status (Lookup Entity)
+
+### 1. Status (Lookup Entity)
 
 Stores clean categorical outcomes ensuring highly optimized indexing performance:
 * **id** (INTEGER, Primary Key)
 * **status** (TEXT: PASS, FAIL, or Pixel sampling validator Required)
 
-2. Texta11y (Core Audit Ledger)
+### 2. Texta11y (Core Audit Ledger)
 
 Tracks individual DOM typographic configurations evaluated:
 * **id** (INTEGER, Primary Key)
