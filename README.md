@@ -48,7 +48,58 @@ WEBA11Y/
 ├── .gitignore        # System configuration to exclude runtime binaries and databases
 └── README.md         # Documentation file
 
+```
+---
 
+## 📊 Database Schema Details
 
+The application creates two normalized data entities inside the generated SQLite binary file:
+1. Status (Lookup Entity)
 
+Stores clean categorical outcomes ensuring highly optimized indexing performance:
+* **id** (INTEGER, Primary Key)
+* **status** (TEXT: PASS, FAIL, or Pixel sampling validator Required)
 
+2. Texta11y (Core Audit Ledger)
+
+Tracks individual DOM typographic configurations evaluated:
+* **id** (INTEGER, Primary Key)
+* **tag** (TEXT) - Original HTML element descriptor
+* **text_content** (TEXT) - Extracted textual content
+* **text_color** (TEXT) - Extracted color profile string
+* **bg_color** (TEXT) - Computed container background color string
+* **contrast_ratio** (REAL) - Calculated relative contrast math ratio (Returns NULL if complex layout requires pixel validation)
+* **font_size** (INTEGER) - Computed size converted to integer pixel units
+* **font_weight** (INTEGER) - Standardized typographic thickness weight
+* **level_aa_id**(INTEGER) - Foreign Key pointing to the definitive Status record
+
+---
+
+## ⚡ Installation & Local Setup
+
+1. Clone the Repository
+
+2. Install Required Python Dependencies
+Ensure you have the required browser orchestration framework configured:
+
+```
+
+pip install selenium
+
+```
+Note: WebDriver management for Google Chrome is handled natively by contemporary versions of Selenium, but ensure you have Google Chrome installed.
+
+3. Execute the auditor module via your terminal terminal interface:
+
+```
+
+py audit.py
+
+```
+
+## 🖥️ Prompt Configurations:
+
+Upon launching, the engine will prompt you for configuration details:
+
+1. **Database name**: Type a name for your data file (e.g., nasadata). The application automatically structures and appends .sqlite layout extensions if omitted.
+2. **Target URL**: Paste any live web system page URL to launch scanning operations. (Pressing Enter without input defaults the runner to a pre-set test link).
