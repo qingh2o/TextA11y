@@ -16,6 +16,20 @@ The software architecture is heavily inspired by Dr. Chuck’s (Dr. Charles Seve
 * **Interactive Terminal Control:** Dynamic execution allows engineers to provide target testing URLs and custom database filenames natively on initialization.
 
 ---
+
+## 🔍 "Pixel Sampling Validator Required" Triggers
+
+A core strength of the web-text-a11y-audit engine is its defensive handling of complex UI rendering environments. Standard relative luminance formulas can only evaluate flat, solid hex/RGB color properties. When encountering complex CSS backgrounds, the application bypasses standard math evaluations to avoid false data and flags the element with a **"Pixel sampling validator Required"** warning. 
+
+This condition is automatically triggered if the engine catches any of the following during tree-climbing evaluation:
+1. **Background Images:** The parent container features a `background-image` property containing a `url(...)` string.
+2. **CSS Gradients:** The background style resolves to a `linear-gradient` or `radial-gradient` rule string.
+3. **Semi-Transparency:** The resolved `background-color` contains an alpha channel lower than 1.0 (`alpha < 1.0`), indicating a translucent color layer blending with underlying layout content.
+
+These entries are preserved in the ledger to indicate that an eye-dropper pixel sampling or manual design inspection is necessary to verify WCAG compliance.
+
+---
+
 ## 🛠️ Tech Stack & Dependencies
 
 * **Language:** Python 3.14.6
