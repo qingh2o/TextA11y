@@ -88,8 +88,8 @@ Ensure you have the required browser orchestration framework configured:
 pip install selenium
 
 ```
-[!NOTE] 
-WebDriver management for Google Chrome is handled natively by contemporary versions of Selenium, but ensure you have Google Chrome installed.
+> **Note:** 
+> WebDriver management for Google Chrome is handled natively by contemporary versions of Selenium, but ensure you have Google Chrome installed.
 
 3. Install DB Browser for SQLite
 The audit results are stored in a SQLite database file (.sqlite). To inspect, query, and export the generated audit data. After the audit completes, open the generated .sqlite file using DB Browser for SQLite to review the audit records.
