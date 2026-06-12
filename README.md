@@ -8,6 +8,7 @@ The software architecture is heavily inspired by Dr. Chuck’s (Dr. Charles Seve
 
 ## 🚀 Key Features & Architectural Highlights
 
+* **Dynamic Viewport Scrolling** (Lazy-Load Bypass): Integrates a sequential programmatic scrolling routine to trigger Intersection Observers and CSS fade-in animations (like inview classes), ensuring hidden or lazy-loaded text elements are fully rendered and captured by the DOM scraper before evaluation.
 * **Universal Semantic Extraction:** Utilizes an advanced universal XPath parser to scrape text strings inside the HTML `<body>` while completely ignoring non-visual nodes (`<script>`, `<style>`, `<noscript>`, `<template>`, and `<svg>`).
 * **Anonymous Text Node Extraction:** Features an injected custom JavaScript execution bridge (`nodeType === 3`) capable of isolating and preserving raw text strings separated by layout break tags (`<br>`), solving a major structural data-loss flaw common in basic web scrapers.
 * **Robust DOM Tree Climbing:** Climbs structural parent layouts dynamically if a text node inherits transparency (`rgba(0,0,0,0)`), accurately tracking down the real rendered background color layout container.

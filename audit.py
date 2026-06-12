@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By 
 from utils import *
+import time
 import re
 import sqlite3
 
@@ -24,7 +25,7 @@ else:
 # 2. URL Prompt (With a quick-test default)
 target_url = input("Enter the audit target URL: ").strip()
 if not target_url:
-    target_url = "https://data.nas.nasa.gov/"
+    target_url = "https://norvigaward.github.io/entries.html"
 
 print(f"\n🚀 Initializing database: '{db_filename}'")
 print(f"🌐 Target URL: {target_url}")
@@ -71,6 +72,15 @@ conn.commit()
 # ----------------------------------------------------------------------
 driver = webdriver.Chrome()
 driver.get(target_url)
+
+# FIX: Scroll down the page sequentially to trigger 'inview' elements
+scroll_height = driver.execute_script("return document.body.scrollHeight")
+for i in range(0, scroll_height, 600):
+    driver.execute_script(f"window.scrollTo(0, {i});")
+    time.sleep(0.3) # Give CSS animations time to switch opacity to 1
+
+time.sleep(1) # Final buffer for the page to settle
+
 
 # Finds any element on the page containing raw, visible text strings
 text_elements = driver.find_elements(
