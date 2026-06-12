@@ -216,14 +216,13 @@ cur.execute('''
 total_passes = cur.fetchone()[0]
 
 print("-"*55)
-print("Audit Summary Report")
+print("WCAG 2.2 AA Level Audit Summary Report")
 print("-"*55)
 
-print(f"❌ Total Failures Elements: {total_failures}")
+print(f"📊 Total Text Elements Audited: {total_failures + total_sampling + total_passes}")
+print(f"❌ Total Text Elements Failed: {total_failures}")
 print(f"⚠️ Total Pixel Sampling Required: {total_sampling}")
-print(f"✅ Total Passing Elements: {total_passes}")
-print(f"📊 Total Elements Audited: {total_failures + total_sampling + total_passes}")
-
+print(f"✅ Total Text Elements Passing: {total_passes}")
 
 
 # ----------------------------------------------------------------------

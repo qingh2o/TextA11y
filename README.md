@@ -124,13 +124,13 @@ Enter the audit target URL: https://example.com
 
 Scanning elements ...
 Note: Browser will close automatically when finished!
---------------------------------------------------
-Audit Summary Report
---------------------------------------------------
-❌ Total Failures Elements: 12
+-------------------------------------------------------
+WCAG 2.2 AA Level Audit Summary Report
+-------------------------------------------------------
+📊 Total Text Elements Audited: 178
+❌ Total Text Elements Failed: 12
 ⚠️ Total Pixel Sampling Required: 17
-✅ Total Passing Elements: 149
-📊 Total Elements Audited: 178
+✅ Total Text Elements Passing : 149
 =======================================================
 Audit Completed - Database Refreshed
 =======================================================
