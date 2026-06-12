@@ -113,9 +113,9 @@ Upon launching, the engine will prompt you for configuration details:
 ## 🎯 Terminal Reporting Output Sample:
 
 ```
-==================================================
+=======================================================
 UX/UI Text Accessibility Audit Engine
-==================================================
+=======================================================
 Enter database name: texta11y
 Enter the audit target URL: https://example.com
 
@@ -131,11 +131,11 @@ Audit Summary Report
 ⚠️ Total Pixel Sampling Required: 17
 ✅ Total Passing Elements: 149
 📊 Total Elements Audited: 178
-==================================================
+=======================================================
 Audit Completed - Database Refreshed
-==================================================
+=======================================================
 💡 Tip:
-1.Open 'texta11y.sqlite' in 'DB Browser for SQLite'
-2.Inspect the detailed 'Texta11y' and 'Status' tables.
+1. Open 'texta11y.sqlite' in 'DB Browser for SQLite'
+2. Inspect the detailed 'Texta11y' and 'Status' tables.
 
 ```
