@@ -117,10 +117,10 @@ Upon launching, the engine will prompt you for configuration details:
 UX/UI Text Accessibility Audit Engine
 ==================================================
 Enter database name: texta11y
-Enter the audit target URL: https://data.nas.nasa.gov/
+Enter the audit target URL: https://example.com
 
 🚀 Initializing database: texta11y.sqlite
-🌐 Target URL: https://data.nas.nasa.gov/
+🌐 Target URL: https://example.com
 
 Scanning elements ...
 Note: Browser will close automatically when finished!
