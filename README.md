@@ -106,7 +106,7 @@ py audit.py
 
 Upon launching, the engine will prompt you for configuration details:
 
-1. **Database name**: Type a name for your data file (e.g., nasadata). The application automatically structures and appends .sqlite layout extensions if omitted.
+1. **Database name**: Type a name for your data file (e.g., data11y). The application automatically structures and appends .sqlite layout extensions if omitted.
 2. **Target URL**: Paste any live web system page URL to launch scanning operations. (Pressing Enter without input defaults the runner to a pre-set test link).
 
 
@@ -134,6 +134,8 @@ Audit Summary Report
 ==================================================
 Audit Completed - Database Refreshed
 ==================================================
-
+💡 Tip:
+1.Open 'texta11y.sqlite' in 'DB Browser for SQLite'
+2.Inspect the detailed 'Texta11y' and 'Status' tables.
 
 ```
