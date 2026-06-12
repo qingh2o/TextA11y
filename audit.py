@@ -71,6 +71,7 @@ conn.commit()
 # Step 2: Browser Automation Start and Engine loop
 # ----------------------------------------------------------------------
 driver = webdriver.Chrome()
+driver.set_window_size(1200, 550)
 driver.get(target_url)
 
 # FIX: Scroll down the page sequentially to trigger 'inview' elements
@@ -85,7 +86,7 @@ time.sleep(1) # Final buffer for the page to settle
 # Finds any element on the page containing raw, visible text strings
 text_elements = driver.find_elements(
     By.XPATH, 
-    "//body//*[text() and not(self::script) and not(self::style) and not(self::noscript) and not(self::template) and not(self::svg)]"
+    "//body//*[normalize-space(text()) != '' and not(self::script) and not(self::style) and not(self::noscript) and not(self::template) and not(self::svg)]"
 )
 
 print("\nScanning elements ... \nNote: Browser will close automatically when finished")
