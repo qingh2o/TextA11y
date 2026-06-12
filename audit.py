@@ -7,9 +7,9 @@ import sqlite3
 # ----------------------------------------------------------------------
 # Step 0: User Configuration Inputs
 # ----------------------------------------------------------------------
-print("="*50)
+print("="*55)
 print("UX/UI Text Accessibility Audit Engine")
-print("="*50)
+print("="*55)
 
 # 1. Database File Prompt (Appends .sqlite automatically if omitted)
 db_input = input("Enter database name: ").strip()
@@ -215,9 +215,9 @@ cur.execute('''
 ''')
 total_passes = cur.fetchone()[0]
 
-print("-"*50)
+print("-"*55)
 print("Audit Summary Report")
-print("-"*50)
+print("-"*55)
 
 print(f"❌ Total Failures Elements: {total_failures}")
 print(f"⚠️ Total Pixel Sampling Required: {total_sampling}")
@@ -234,6 +234,7 @@ driver.quit()
 cur.close()
 conn.close()
 
-print("="*50)
+print("="*55)
 print("Audit Completed - Database Refreshed")
-print("="*50 + "\n")
+print("="*55)
+print(f"💡 Tip: \n1. Open '{db_filename}' in 'DB Browser for SQLite' \n2. Inspect the detailed 'Texta11y' and 'Status' tables.\n")
