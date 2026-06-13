@@ -1,6 +1,6 @@
-# web-text-a11y-audit: Automated Text Accessibility Auditor
+# TextA11y: Automated Text Accessibility Auditor
 
-**web-text-a11y-audit** is an automated web text accessibility auditing tool developed specifically for UX/UI designers, testers, and developers to evaluate web page text accessibility. Built using **Python**, **Selenium WebDriver**, and **SQLite**, the engine acts as an automated web scraper and compliance evaluator. It dynamically maps, extracts, and validates on-screen textual components against official W3C Web Content Accessibility Guidelines (WCAG) 2.2 Relative Luminance Contrast Standards.
+**TextA11y** is an automated web text accessibility auditing tool developed specifically for UX/UI designers, testers, and developers to evaluate web page text accessibility. Built using **Python**, **Selenium WebDriver**, and **SQLite**, the engine acts as an automated web scraper and compliance evaluator. It dynamically maps, extracts, and validates on-screen textual components against official W3C Web Content Accessibility Guidelines (WCAG) 2.2 Relative Luminance Contrast Standards.
 
 The software architecture is heavily inspired by Dr. Chuck’s (Dr. Charles Severance) data design patterns: implementing an asynchronous pipeline that handles extraction, data cleanup, relational normalization, and foreign-key mapping inside a relational database system.
 
